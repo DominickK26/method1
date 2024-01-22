@@ -6,6 +6,7 @@ import java.util.Scanner;
 class Task{
   private String name;
   private String dueDate;
+  
 
   public Task(String Name, String DueDate){
     this.name = Name;
@@ -19,7 +20,7 @@ class Task{
   }
 }
 
-public class TaskManager{
+public class Main{
    private static ArrayList<Task> tasks = new ArrayList<>();
    private static Scanner scanner = new Scanner(System.in);
    public static void main(String[] args) {
@@ -59,7 +60,7 @@ public class TaskManager{
   private static void addTask(){
     System.out.print("Enter the task name:");
     String name = scanner.nextLine();
-    System.out.print("Enter the due date (YYYY-MM-DD):");
+    System.out.print("Enter the due date (MM/DD/YR):");
     String dueDate = scanner.nextLine();
     Task task = new Task(name, dueDate);
     tasks.add(task);
